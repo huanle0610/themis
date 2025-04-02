@@ -13,24 +13,25 @@
 # limitations under the License.
 
 CXX ?= c++
+CXXFLAGS += -I/workspaces/themis/src/wrappers/themis
 
 all: secure_cell_file_encrypter
 
 secure_cell_file_encrypter: secure_cell_file_encrypter.cpp
-	$(CXX) -o $@ $< -lthemis -lsoter
+	$(CXX) $(CXXFLAGS) -o $@ $< -lthemis -lsoter
 
 all: secure_message_client secure_message_server
 
 secure_message_client: secure_message_client.cpp shared_keys.hpp
-	$(CXX) -o $@ $< -lthemis -pthread -lboost_system
+	$(CXX) $(CXXFLAGS) -o $@ $< -lthemis -pthread -lboost_system
 
 secure_message_server: secure_message_server.cpp shared_keys.hpp
-	$(CXX) -o $@ $< -lthemis -pthread -lboost_system -lboost_thread
+	$(CXX) $(CXXFLAGS) -o $@ $< -lthemis -pthread -lboost_system -lboost_thread
 
 all: secure_session_client secure_session_server
 
 secure_session_client: secure_session_client.cpp shared_keys.hpp
-	$(CXX) -o $@ $< -lthemis -pthread -lboost_system
+	$(CXX) $(CXXFLAGS) -o $@ $< -lthemis -pthread -lboost_system
 
 secure_session_server: secure_session_server.cpp shared_keys.hpp
-	$(CXX) -o $@ $< -lthemis -pthread -lboost_system -lboost_thread
+	$(CXX) $(CXXFLAGS) -o $@ $< -lthemis -pthread -lboost_system -lboost_thread

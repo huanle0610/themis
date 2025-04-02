@@ -1,5 +1,8 @@
 project(themis)
 cmake_minimum_required(VERSION 3.8)
+
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+
 include_directories(src)
 
 if (NO_NIST_STS)
@@ -42,3 +45,5 @@ add_executable(themispp_test ${THEMISPP_TEST_SOURCE})
 target_include_directories(themispp_test PUBLIC tests src/wrappers/themis)
 target_link_libraries(themispp_test themispp themis soter crypto)
 set_target_properties(themispp_test PROPERTIES LINKER_LANGUAGE CXX)
+
+add_subdirectory(docs/examples/c++)

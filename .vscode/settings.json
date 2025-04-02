@@ -1,0 +1,7 @@
+{
+    "cmake.options.statusBarVisibility": "visible",
+    "cmake.configureSettings": {
+        "CMAKE_TOOLCHAIN_FILE": "",
+        "VCPKG_TARGET_TRIPLET": ""
+    },
+}
