@@ -1,7 +1,8 @@
 {
     "cmake.options.statusBarVisibility": "visible",
     "cmake.configureSettings": {
-        "CMAKE_TOOLCHAIN_FILE": "",
-        "VCPKG_TARGET_TRIPLET": ""
+        "CMAKE_TOOLCHAIN_FILE": "~/vcpkg/scripts/buildsystems/vcpkg.cmake",
+        "VCPKG_TARGET_TRIPLET": "x64-linux",
+        "CMAKE_PREFIX_PATH": "~/vcpkg/installed/x64-linux"
     },
 }
