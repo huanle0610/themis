@@ -28,3 +28,7 @@ target_link_libraries(secure_session_client ${THEMIS_LIBS})
 
 add_executable(secure_session_server secure_session_server.cpp )
 target_link_libraries(secure_session_server ${THEMIS_LIBS})
+
+find_package(cxxopts CONFIG REQUIRED)
+add_executable(lic_gen lic_gen.cpp)
+target_link_libraries(lic_gen ${THEMIS_LIBS} cxxopts::cxxopts)

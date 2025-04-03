@@ -5,4 +5,8 @@
         "VCPKG_TARGET_TRIPLET": "x64-linux",
         "CMAKE_PREFIX_PATH": "~/vcpkg/installed/x64-linux"
     },
+    "cmake.debugConfig": {
+        "args": ["-g"]
+    },
+
 }
